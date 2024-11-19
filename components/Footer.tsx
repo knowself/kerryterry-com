@@ -51,6 +51,17 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-brown/5 text-center text-brown">
           <p>&copy; {currentYear} Kerry Terry Piano. All rights reserved.</p>
+          <p className="mt-2 text-[14px] text-brown/60">
+            Website designed and built by{' '}
+            <a 
+              href="https://derivativegenius.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brown transition-colors duration-200"
+            >
+              Derivative Genius
+            </a>
+          </p>
         </div>
       </div>
     </footer>
