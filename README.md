@@ -1,30 +1,54 @@
-# Project Name
+# Kerry Terry Piano Lessons
 
-A Next.js project template with TypeScript and Tailwind CSS.
+A modern, responsive website for Kerry Terry's piano teaching practice in Northern California. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Features
+## About
 
-- Next.js for server-side rendering and routing
-- TypeScript for type safety
-- Tailwind CSS for styling
-- Jest and React Testing Library for testing
-- ESLint and Prettier for code formatting
-- Husky for Git hooks
+This website serves as the online presence for Mrs. Terry's piano teaching practice, providing:
+- Information about her teaching philosophy and methods
+- Details about lesson offerings
+- Contact information for prospective students
+- Student resources and materials
 
-## Getting Started
+## Technology Stack
 
-1. Copy the `project-template` directory to a new location for your project
-2. Rename the directory to your project name
-3. Update the project name in `package.json`
-4. Install dependencies:
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Image Optimization**: Next.js Image Component with Sharp
+- **Development Tools**: ESLint, Prettier
+- **Testing**: Jest and React Testing Library
+
+## Development
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:knowself/kerryterry-com.git
+   cd kerryterry-com
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
-5. Run the development server:
+
+3. Start the development server:
    ```bash
    npm run dev
    ```
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Project Structure
+
+```
+├── components/     # Reusable React components
+├── pages/         # Next.js pages and API routes
+├── public/        # Static assets and images
+├── styles/        # Global styles and Tailwind configuration
+└── types/         # TypeScript type definitions
+```
 
 ## Available Scripts
 
@@ -35,24 +59,14 @@ A Next.js project template with TypeScript and Tailwind CSS.
 - `npm run lint` - Run linting
 - `npm run format` - Format code
 
-## Project Structure
+## Deployment
 
-```
-├── components/     # React components
-├── pages/          # Next.js pages
-├── public/         # Static assets
-├── styles/         # CSS styles
-├── types/          # TypeScript types
-└── __tests__/     # Test files
-```
-
-## Contributing
-
-1. Create a feature branch
-2. Commit changes
-3. Push to the branch
-4. Create a Pull Request
+The site is built for deployment on Vercel, optimized for:
+- Server-side rendering
+- Image optimization
+- Edge functions
+- API routes
 
 ## License
 
-ISC
+All Rights Reserved - Kerry Terry
