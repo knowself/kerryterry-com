@@ -24,25 +24,26 @@ const DEFAULT_BUSINESS_DATA: LocalBusinessData = {
   name: 'Kerry Terry Piano',
   description: 'Professional piano instruction for all levels in Lake County, California. Traditional methods combined with modern techniques.',
   image: 'https://kerryterry.com/images/kerry-terry.png',
-  telephone: '+1-503-555-0123', // Replace with actual phone number
+  telephone: '+1-707-555-0123', // TODO: Replace with actual phone number
   address: {
-    streetAddress: '1234 Lake County Road', // Replace with actual address
-    addressLocality: 'Lake County',
+    streetAddress: '123 Main Street', // TODO: Replace with actual address
+    addressLocality: 'Lakeport',
     addressRegion: 'CA',
-    postalCode: '95451', // Replace with actual postal code
+    postalCode: '95453', // TODO: Replace with actual postal code
     addressCountry: 'US',
   },
   geo: {
-    latitude: 39.0968, // Lake County coordinates
-    longitude: -122.8472,
+    latitude: 39.0439, // Lakeport coordinates
+    longitude: -122.9158,
   },
   priceRange: '$$',
   openingHours: [
-    'Monday 09:00-17:00',
-    'Tuesday 09:00-17:00',
-    'Wednesday 09:00-17:00',
-    'Thursday 09:00-17:00',
-    'Friday 09:00-17:00',
+    'Monday 09:00-18:00',
+    'Tuesday 09:00-18:00',
+    'Wednesday 09:00-18:00',
+    'Thursday 09:00-18:00',
+    'Friday 09:00-18:00',
+    'Saturday 10:00-16:00'
   ],
 };
 

@@ -2,12 +2,14 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import Breadcrumbs from './Breadcrumbs';
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 export default function Layout({
@@ -15,6 +17,7 @@ export default function Layout({
   title = 'Piano Lessons in Lake County | Kerry Terry Piano',
   description = 'Discover the joy of piano with Kerry Terry. Offering personalized piano lessons in Lake County for beginners to advanced students. Traditional methods combined with modern techniques.',
   image = '/images/piano-lessons.jpg',
+  noindex = false,
 }: LayoutProps) {
   const router = useRouter();
   const canonicalUrl = `https://kerryterry.com${router.asPath}`;
@@ -28,8 +31,19 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         
+        {/* Robots Meta Tags */}
+        {noindex ? (
+          <meta name="robots" content="noindex, nofollow" />
+        ) : (
+          <meta name="robots" content="index, follow" />
+        )}
+        
         {/* Canonical Link */}
         <link rel="canonical" href={canonicalUrl} />
+
+        {/* Alternate Language Tags */}
+        <link rel="alternate" href={`https://kerryterry.com${router.asPath}`} hrefLang="en-US" />
+        <link rel="alternate" href={`https://kerryterry.com${router.asPath}`} hrefLang="x-default" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -70,10 +84,13 @@ export default function Layout({
         <meta name="format-detection" content="telephone=no" />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-offwhite">
+      <div className="flex flex-col min-h-screen">
         <Navigation />
-        <main className="flex-1 relative">
-          {children}
+        <main className="flex-grow">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs />
+            {children}
+          </div>
         </main>
         <Footer />
       </div>
