@@ -1,0 +1,21 @@
+{
+  "name": "Kerry Terry Piano",
+  "short_name": "Kerry Terry",
+  "description": "Piano lessons in Portland with Kerry Terry. Traditional methods combined with modern techniques.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EEEC",
+  "theme_color": "#F4EEEC",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
