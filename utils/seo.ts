@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface HeadingProps {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
@@ -41,8 +43,8 @@ export const validateImageAltText = (images: HTMLImageElement[]): boolean => {
 
 // React component for semantic headings
 export const Heading = ({ level, children, className = '' }: HeadingProps) => {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-  return <Tag className={className}>{children}</Tag>;
+  const Tag = `h${level}`;
+  return React.createElement(Tag, { className }, children);
 };
 
 // Helper function to generate structured heading IDs
