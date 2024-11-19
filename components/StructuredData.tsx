@@ -22,19 +22,19 @@ interface LocalBusinessData {
 
 const DEFAULT_BUSINESS_DATA: LocalBusinessData = {
   name: 'Kerry Terry Piano',
-  description: 'Professional piano instruction for all levels in Portland, Oregon. Traditional methods combined with modern techniques.',
+  description: 'Professional piano instruction for all levels in Lake County, California. Traditional methods combined with modern techniques.',
   image: 'https://kerryterry.com/images/kerry-terry.png',
   telephone: '+1-503-555-0123', // Replace with actual phone number
   address: {
-    streetAddress: '1234 SE Portland Street', // Replace with actual address
-    addressLocality: 'Portland',
-    addressRegion: 'OR',
-    postalCode: '97214', // Replace with actual postal code
+    streetAddress: '1234 Lake County Road', // Replace with actual address
+    addressLocality: 'Lake County',
+    addressRegion: 'CA',
+    postalCode: '95451', // Replace with actual postal code
     addressCountry: 'US',
   },
   geo: {
-    latitude: 45.5155, // Replace with actual coordinates
-    longitude: -122.6789,
+    latitude: 39.0968, // Lake County coordinates
+    longitude: -122.8472,
   },
   priceRange: '$$',
   openingHours: [

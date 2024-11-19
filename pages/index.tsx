@@ -1,170 +1,90 @@
 import Layout from '../components/Layout';
-import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { OptimizedImage } from '@/components/OptimizedImage';
-import StructuredData from '../components/StructuredData';
-
-const features = [
-  {
-    title: 'Personalized Approach',
-    description: 'Each student receives individualized attention and a curriculum tailored to their unique goals and learning style.',
-  },
-  {
-    title: 'All Ages Welcome',
-    description: 'From young beginners to adult learners, I provide engaging instruction adapted to every age and skill level.',
-  },
-  {
-    title: 'Comprehensive Education',
-    description: 'Learn proper technique, music theory, and performance skills in a supportive environment.',
-  }
-];
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <Layout>
-      <div className="relative">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center">
-          <div className="absolute inset-0 z-0">
+      <div className="min-h-screen animate-fade-in">
+        {/* Banner Image */}
+        <div className="pt-24 pb-6">
+          <div className="relative w-full h-[300px]">
             <Image
-              src="/images/piano-close.png"
-              alt="Piano keys close-up"
+              src="/images/website-banner.png"
+              alt="Kerry Terry Piano"
               fill
-              className="object-cover object-center"
-              sizes="100vw"
+              className="object-contain"
               priority
-              quality={90}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-offwhite/95 to-offwhite/80" />
           </div>
-          
-          <div className="container relative z-10 pt-24">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl"
-            >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-eb-garamond text-brown leading-[1.15] mb-10">
-                Mrs. Terry's Piano Lessons
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-eb-garamond font-medium tracking-tight text-gray-900 mb-8 animate-fade-in-up">
+                Piano Lessons with{' '}
+                <span className="text-brown">Kerry Terry</span>
               </h1>
-              <p className="text-xl md:text-2xl text-brown/90 mb-14 max-w-2xl leading-relaxed">
-                Discover the joy of playing piano through personalized lessons tailored to your unique goals and learning style.
+              
+              <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-4 animate-fade-in-up animation-delay-200">
+                Discover the joy of music through personalized piano lessons 
+                tailored to your unique journey.
               </p>
-              <Link
-                href="/contact"
-                className="button-primary text-lg px-10 py-4"
-              >
-                Schedule Your First Lesson
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Welcome Section */}
-        <section className="py-24 md:py-32 lg:py-36">
-          <div className="container">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-eb-garamond text-brown mb-8 leading-tight">
-                Welcome to Kerry Terry Piano
-              </h2>
-              <div className="prose max-w-none text-lg">
-                <p className="mb-8">
-                  With over 30 years of teaching experience, I help students of all ages discover 
-                  their musical potential and develop a lifelong love for piano.
-                </p>
-                <p>
-                  My teaching approach combines traditional methods with modern techniques, 
-                  ensuring students build a strong foundation while maintaining their enthusiasm 
-                  for music.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-24 md:py-32 lg:py-36 bg-brown/[0.03]">
-          <div className="container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto mb-20"
-            >
-              <h2 className="text-4xl md:text-5xl font-eb-garamond text-brown mb-8 leading-tight">
-                Why Choose Kerry Terry Piano
-              </h2>
-              <p className="text-lg text-brown/90">
-                Experience a comprehensive piano education that nurtures both technical skill and musical creativity.
+              
+              <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-10 animate-fade-in-up animation-delay-200">
+                Serving Lake County, California and surrounding areas
               </p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-10 shadow-[0_4px_20px_rgba(49,34,30,0.05)] hover:shadow-[0_4px_20px_rgba(49,34,30,0.1)] transition-shadow duration-300"
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-brown hover:bg-brown/90 transition shadow-sm"
                 >
-                  <h3 className="text-2xl font-eb-garamond text-brown mb-5">
-                    {feature.title}
-                  </h3>
-                  <p className="text-brown/90 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
+                  Start Your Journey
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition shadow-sm"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 md:py-32 lg:py-36 relative">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/kerry-terry.png"
-              alt="Kerry Terry Piano Studio"
-              fill
-              className="object-cover object-center"
-              sizes="100vw"
-              quality={90}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-offwhite/[0.97] to-offwhite/90" />
-          </div>
-          
-          <div className="container relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-eb-garamond text-brown mb-8 leading-tight">
-                Begin Your Musical Journey
-              </h2>
-              <p className="text-xl text-brown/90 mb-10 leading-relaxed">
-                Contact me today to schedule your first lesson or learn more about my teaching approach.
-              </p>
-              <Link
-                href="/contact"
-                className="button-primary text-lg px-10 py-4"
-              >
-                Get Started
-              </Link>
-            </motion.div>
+        {/* Features Section */}
+        <section className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
+              {[
+                {
+                  title: 'Personalized Learning',
+                  description: 'Tailored instruction that adapts to your pace and learning style.'
+                },
+                {
+                  title: 'Experienced Teacher',
+                  description: 'Over 15 years of teaching experience with students of all ages.'
+                },
+                {
+                  title: 'Convenient Location',
+                  description: 'Conveniently located in Lake County, California.'
+                }
+              ].map((feature, index) => (
+                <div 
+                  key={feature.title}
+                  className="text-center animate-fade-in-up"
+                  style={{ animationDelay: `${(index + 1) * 200}ms` }}
+                >
+                  <h3 className="text-xl font-eb-garamond font-medium text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </div>

@@ -12,9 +12,9 @@ interface LayoutProps {
 
 export default function Layout({
   children,
-  title = 'Piano Lessons in Portland | Kerry Terry Piano',
-  description = 'Discover the joy of piano with Kerry Terry. Offering personalized piano lessons in Portland for beginners to advanced students. Traditional methods combined with modern techniques.',
-  image = '/images/og-image.png',
+  title = 'Piano Lessons in Lake County | Kerry Terry Piano',
+  description = 'Discover the joy of piano with Kerry Terry. Offering personalized piano lessons in Lake County for beginners to advanced students. Traditional methods combined with modern techniques.',
+  image = '/images/piano-lessons.jpg',
 }: LayoutProps) {
   const router = useRouter();
   const canonicalUrl = `https://kerryterry.com${router.asPath}`;
@@ -66,13 +66,15 @@ export default function Layout({
 
         {/* Additional Meta Tags */}
         <meta name="author" content="Kerry Terry" />
-        <meta name="keywords" content="piano lessons, piano teacher, music education, Portland, Kerry Terry, piano instruction, beginner piano, advanced piano" />
+        <meta name="keywords" content="piano lessons, piano teacher, music education, Lake County, California, Kerry Terry, piano instruction, beginner piano, advanced piano" />
         <meta name="format-detection" content="telephone=no" />
       </Head>
 
-      <div className="flex flex-col min-h-screen bg-offwhite">
+      <div className="min-h-screen flex flex-col bg-offwhite">
         <Navigation />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-1 relative">
+          {children}
+        </main>
         <Footer />
       </div>
     </>

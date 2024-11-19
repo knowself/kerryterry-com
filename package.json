@@ -30,6 +30,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.14",
@@ -52,13 +53,13 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@types/nodemailer": "^6.4.16",
-    "framer-motion": "^11.11.17",
     "next": "14.0.0",
     "nodemailer": "^6.9.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.53.2",
     "sharp": "^0.32.6",
+    "to-ico": "^1.1.5",
     "zod": "^3.23.8"
   }
 }

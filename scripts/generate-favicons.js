@@ -1,6 +1,7 @@
 const sharp = require('sharp');
 const fs = require('fs').promises;
 const path = require('path');
+const toIco = require('to-ico');
 
 const FAVICON_SIZES = [16, 32, 180, 192, 512];
 const SOURCE_IMAGE = path.join(__dirname, '../public/images/logo.png');
@@ -23,7 +24,8 @@ async function generateFavicons() {
       await image
         .resize(size, size, {
           fit: 'contain',
-          background: { r: 255, g: 255, b: 255, alpha: 0 }
+          background: { r: 244, g: 238, b: 236, alpha: 1 }, 
+          kernel: sharp.kernel.lanczos3 
         })
         .png()
         .toFile(path.join(OUTPUT_DIR, fileName));
@@ -31,12 +33,30 @@ async function generateFavicons() {
       console.log(`Generated ${fileName}`);
     }
 
-    // Generate ICO file (16x16 and 32x32)
-    const icoBuffer = await image
-      .resize(32, 32)
-      .toFormat('ico')
+    // Generate ICO file with higher quality settings
+    const png16 = await image
+      .resize(16, 16, {
+        fit: 'contain',
+        background: { r: 244, g: 238, b: 236, alpha: 1 },
+        kernel: sharp.kernel.lanczos3
+      })
+      .png()
       .toBuffer();
     
+    const png32 = await image
+      .resize(32, 32, {
+        fit: 'contain',
+        background: { r: 244, g: 238, b: 236, alpha: 1 },
+        kernel: sharp.kernel.lanczos3
+      })
+      .png()
+      .toBuffer();
+
+    const icoBuffer = await toIco([png16, png32], {
+      resize: false, 
+      sizes: [16, 32]
+    });
+
     await fs.writeFile(path.join(OUTPUT_DIR, 'favicon.ico'), icoBuffer);
     console.log('Generated favicon.ico');
 

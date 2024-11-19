@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './animations.css';
+
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Proza+Libre:wght@400;500&display=swap');
 

@@ -1,17 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
+  // Close menu when route changes
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    const handleRouteChange = () => setIsMenuOpen(false);
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
+
+  // Handle body scroll lock
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    return () => {
       document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  // Handle keyboard navigation
+  const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
+    if (event.key === 'Escape' && isMenuOpen) {
+      setIsMenuOpen(false);
     }
   }, [isMenuOpen]);
 
@@ -21,125 +37,98 @@ export default function Navigation() {
     { href: '/contact', label: 'Contact' },
   ];
 
-  const isActive = (path: string) => {
-    if (path === '/' && router.pathname !== '/') return false;
-    return router.pathname.startsWith(path);
-  };
+  const isActive = (path: string) => 
+    path === '/' ? router.pathname === '/' : router.pathname.startsWith(path);
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="absolute inset-0 bg-offwhite/95 backdrop-blur-[20px]"></div>
-        <nav className="container relative mx-auto px-6 py-5">
-          <div className="flex items-center justify-between">
-            <Link 
-              href="/" 
-              className="text-[22px] font-eb-garamond text-brown hover:text-primary transition-colors duration-300"
+    <header className="fixed w-full top-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+      <nav 
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+        onKeyDown={handleKeyDown}
+      >
+        <Link 
+          href="/" 
+          className="flex items-center gap-3 text-xl font-medium text-gray-900 hover:text-gray-600 transition"
+          aria-label="Kerry Terry - Home"
+        >
+          <Image
+            src="/images/logo.png"
+            alt="Kerry Terry Piano"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+            priority
+          />
+          <span>Kerry Terry</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`relative text-sm font-medium ${
+                isActive(link.href) 
+                  ? 'text-gray-900 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-gray-900'
+                  : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}
+              aria-current={isActive(link.href) ? 'page' : undefined}
             >
-              Kerry Terry
+              {link.label}
             </Link>
+          ))}
+        </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-14">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-[15px] tracking-wide text-brown hover:text-primary transition-colors duration-300 ${
-                    isActive(link.href) ? 'text-primary' : ''
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <motion.button
-              className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center text-brown hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-              animate={isMenuOpen ? "open" : "closed"}
-              initial={false}
-            >
-              <motion.div
-                className="w-5 flex flex-col justify-center items-center"
-              >
-                <motion.span
-                  className="w-5 h-[1.5px] bg-current absolute origin-center"
-                  variants={{
-                    closed: { rotate: 0, y: -4 },
-                    open: { rotate: 45, y: 0 }
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                />
-                <motion.span
-                  className="w-5 h-[1.5px] bg-current absolute origin-center"
-                  variants={{
-                    closed: { opacity: 1 },
-                    open: { opacity: 0 }
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                />
-                <motion.span
-                  className="w-5 h-[1.5px] bg-current absolute origin-center"
-                  variants={{
-                    closed: { rotate: 0, y: 4 },
-                    open: { rotate: -45, y: 0 }
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                />
-              </motion.div>
-            </motion.button>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition"
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          <div className="w-5 h-4 relative flex flex-col justify-between">
+            <span className={`w-full h-0.5 bg-gray-900 transition-all duration-300 ${
+              isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+            }`} />
+            <span className={`w-full h-0.5 bg-gray-900 transition-all duration-300 ${
+              isMenuOpen ? 'opacity-0' : ''
+            }`} />
+            <span className={`w-full h-0.5 bg-gray-900 transition-all duration-300 ${
+              isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+            }`} />
           </div>
-        </nav>
-      </header>
+        </button>
+      </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 md:hidden"
-          >
-            <motion.div 
-              className="absolute inset-0 bg-offwhite/95 backdrop-blur-[20px]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            />
-            <nav className="relative h-full flex flex-col items-center justify-center space-y-10">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ 
-                    duration: 0.3, 
-                    delay: 0.1 + i * 0.1,
-                    ease: "easeOut"
-                  }}
-                >
-                  <Link
-                    href={link.href}
-                    className={`text-[28px] font-eb-garamond text-brown hover:text-primary transition-colors duration-300 ${
-                      isActive(link.href) ? 'text-primary' : ''
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      <div
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Mobile menu"
+        className={`fixed inset-0 top-16 bg-white/80 backdrop-blur-md z-40 md:hidden transition-opacity duration-300 ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <nav className="container mx-auto px-6 py-8">
+          <div className="flex flex-col space-y-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-lg font-medium ${
+                  isActive(link.href) ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+                } transition-colors`}
+                aria-current={isActive(link.href) ? 'page' : undefined}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      </div>
+    </header>
   );
 }

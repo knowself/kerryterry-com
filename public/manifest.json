@@ -1,6 +1,7 @@
 {
-  "short_name": "Kerry Terry",
-  "name": "Kerry Terry - Software Developer",
+  "short_name": "Kerry Terry Piano",
+  "name": "Kerry Terry Piano - Lake County, CA",
+  "description": "Piano lessons and music education by Kerry Terry in Lake County, California",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +9,33 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#41a4b1",
-  "background_color": "#ffffff"
+  "theme_color": "#F4EEEC",
+  "background_color": "#F4EEEC"
 }

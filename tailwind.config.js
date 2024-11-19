@@ -54,6 +54,9 @@ module.exports = {
             h3: {
               fontFamily: 'EB Garamond',
             },
+            h4: {
+              fontFamily: 'EB Garamond',
+            },
           },
         },
       },
