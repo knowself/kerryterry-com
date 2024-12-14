@@ -24,8 +24,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-eb-garamond font-medium tracking-tight text-gray-900 mb-8 animate-fade-in-up">
-                Piano Lessons with{' '}
-                <span className="text-brown">Kerry Terry</span>
+                Piano Lessons with Kerry Terry
               </h1>
               
               <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-4 animate-fade-in-up animation-delay-200">
@@ -33,13 +32,9 @@ export default function Home() {
                 tailored to your unique journey.
               </p>
               
-              <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-10 animate-fade-in-up animation-delay-200">
-                Serving Lake County, California and surrounding areas
-              </p>
-
               <div className="max-w-3xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl p-8 mb-10 shadow-sm animate-fade-in-up animation-delay-300">
                 <p className="text-gray-700 leading-relaxed">
-                  Kerry Terry has taught piano since 2008. With over a decade and a half of experience she uses a teaching blend of sheet music and lesson/theory books, ear training, along with student composing. She teaches beginner to intermediate, children to adults. As the music skills progress, the confidence grows, helping each student find their inner musician.
+                  Kerry Terry has taught piano since 2008. With over a decade and a half of experience, she uses a blend of lesson/theory books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. She teaches beginner to intermediate, children to adults. As the music skills progress, the confidence grows, helping each student find their inner musician.
                 </p>
               </div>
 
@@ -65,7 +60,7 @@ export default function Home() {
                     </h2>
                     <div className="space-y-6">
                       <p className="text-gray-700 leading-relaxed">
-                        Learning piano music is like learning a language, hearing and seeing it played is not enough for most of us to become proficient or even simply play without frustration. One must actually play the instrument, learn the theory, and then practice it daily to achieve a level of enjoyment.
+                        Learning piano music is like learning a language, hearing and seeing it played is not enough for most of us to become proficient or even simply play without frustration. One must actively play the instrument, learn the theory, and then practice it daily to achieve a level of enjoyment.
                       </p>
                       
                       <p className="text-gray-700 leading-relaxed italic font-medium">
