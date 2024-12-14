@@ -34,18 +34,8 @@ We use firebase from the cloud except there are some cloud functions we create l
 
 Admin privileges as well as all authentication is controled by firebase
 
-
-``` memory json
-{
-  "project": "Kerry Terry Piano Lessons Website",
-  "metadata": {
-    "last_updated": "2024-12-10T10:09:07-05:00",
-    "version": "1.0.0",
-    "description": "System of record for technical decisions and implementation details",
-  },
-  "learnings": {
-  }
-}
+```
+=== do not change anything above this line === do not change anything above this line === do not change anything above this line ===
 ```
 
 ## Tech Stack Documentation

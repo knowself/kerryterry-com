@@ -4,7 +4,7 @@ A modern, responsive website for Kerry Terry's piano teaching practice in Northe
 
 ## About
 
-This website serves as the online presence for Mrs. Terry's piano teaching practice, providing:
+This website serves as the online presence for KerryTerry's piano teaching practice, providing:
 - Information about her teaching philosophy and methods
 - Details about lesson offerings
 - Contact information for prospective students

@@ -14,7 +14,7 @@ const Footer = () => {
               Kerry Terry
             </Link>
             <p className="mt-4 text-brown">
-              Providing comprehensive piano instruction in Lake County, combining traditional methods with modern techniques.
+              Providing comprehensive piano instruction, combining traditional methods with modern techniques.
             </p>
           </div>
 
@@ -35,10 +35,9 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-eb-garamond text-brown-dark mb-4">Contact</h3>
             <div className="space-y-3 text-brown">
-              <p>Lake County, California</p>
               <p>
                 <a href="mailto:kerry@kerryterry.com" className="nav-link">
                   kerry@kerryterry.com

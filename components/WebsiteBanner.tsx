@@ -7,7 +7,7 @@ export default function WebsiteBanner() {
         <div className="w-1/3 mx-auto" style={{ maxWidth: '500px' }}>
           <Image
             src="/images/website-banner.png"
-            alt="Mrs. Terry's Piano Lessons Banner"
+            alt="Kerry Terry's Piano Lessons Banner"
             width={500}
             height={80}
             style={{ objectFit: 'contain', width: '100%', height: 'auto' }}

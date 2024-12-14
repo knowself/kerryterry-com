@@ -10,10 +10,6 @@ const carouselImages = [
     alt: 'Mind Grow Tree - Piano Learning Journey'
   },
   {
-    src: '/images/02 Piano Playing Cat.png',
-    alt: 'Piano Playing Cat'
-  },
-  {
     src: '/images/03 Kawai-DG30-Digital-Grand-600x600.jpg',
     alt: 'Kawai DG30 Digital Grand Piano'
   },
@@ -30,18 +26,18 @@ const carouselImages = [
 export default function About() {
   return (
     <Layout
-      title="About Mrs. Terry's Piano Lessons | Lake County"
-      description="Learn about Kerry Terry's piano teaching experience and philosophy in Lake County, California."
+      title="About Kerry Terry's Piano Lessons"
+      description="Learn about Kerry Terry's piano teaching experience and philosophy."
     >
       <div className="min-h-screen pt-16 animate-fade-in">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center mb-16 animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl font-eb-garamond font-medium text-gray-900 mb-6">
-              About Mrs. Terry's Piano Lessons
+              About Kerry Terry's Piano Lessons
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600">
-                Dedicated piano teacher with over 15 years of experience, sharing the joy of music with students in Lake County.
+                Dedicated piano teacher with over 15 years of experience, sharing the joy of music with students.
               </p>
             </div>
           </div>
@@ -75,24 +71,23 @@ export default function About() {
                   </h2>
                   <div className="space-y-4 text-gray-600">
                     <p>
-                      The piano teaching method I use most is Alfred's.
+                      The piano teaching methods I use most:
                     </p>
                     <p className="text-2xl text-blue-600 hover:text-blue-700 text-center py-2">
                       <a href="https://www.alfred.com" target="_blank" rel="noopener noreferrer">
-                        www.alfred.com
+                        Alfred Music
                       </a>
                     </p>
-                    <p>
-                      I will add technique, exercise, and/or scale books, along with other piano music on occasion to the basic lesson and theory books, as the student becomes more skilled and when I think they are ready for extra learning and fun.
+                    <p className="text-2xl text-blue-600 hover:text-blue-700 text-center py-2">
+                      <a href="https://www.pianoadventures.com" target="_blank" rel="noopener noreferrer">
+                      Piano Adventures
+                      </a>
                     </p>
                     <p>
                       I try to keep it simple in the beginning to not overload and so I can assess the learning level and pace, as well as keep the desire and interest going. Ultimately, it is about the joy of playing the music.
                     </p>
                     <p>
-                      Practice is a necessary discipline. For the adult learner, we will work together to develop a practice plan. The young student generally requires extra encouragement to practice.
-                    </p>
-                    <p>
-                      As with all education for our children, we as the parents desire to be involved and participate in the learning process. I am speaking to the music lesson process. It is helpful to have the parent work with the young student to find the best daily practice time, and then have it marked on a calendar or daily schedule. This will help the student to make piano practice time a daily habit.
+                      Practice is a necessary discipline. For the adult learner, we will work together to develop a practice plan. The young student generally requires extra encouragement to practice. As with all education for our children, it is helpful to have the parent work with the young student to find the best daily practice time, and then have it marked on a calendar or daily schedule. This will help the student to make piano practice time a daily habit.
                     </p>
                   </div>
                 </div>
@@ -106,15 +101,15 @@ export default function About() {
             
             <div className="space-y-8 text-lg">
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Rates and Materials</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Rates and Materials</h3>
                 <p>
-                  My current rate for each student is $20 per half hour, plus the cost of the piano books, 
+                  My current rate for each student is $25 per half hour, plus the cost of the piano books, 
                   usually a lesson, theory, and performance books.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">First Lesson</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">First Lesson</h3>
                 <p>
                   The first lesson is free so that you and/or the student can decide if I'm the right teacher. 
                   Should you decide to continue, the next lesson and onward is for pay.
@@ -122,7 +117,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Commitment</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Commitment</h3>
                 <p>
                   I do not require a contract for any time period, it is month to month. If you decide it is 
                   no longer a good fit, or for any other reason, just let me know and we'll end the lessons.
@@ -130,11 +125,10 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Missed Lessons</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Missed Lessons</h3>
                 <p>
-                  I'm fine, with a bit of advanced notice, to reschedule for another day that same week, 
-                  availability permitting. Otherwise we just skip the lesson for that week, which means more 
-                  time to practice. I am flexible and always allow for sick days.
+               I am flexible and always allow for sick days. When you need to miss your calendared lesson, with advanced notice, you may reschedule for another day that same week, 
+                  availability permitting. Otherwise we just skip the lesson for that week, which means more time to practice.
                 </p>
               </div>
             </div>
@@ -146,7 +140,7 @@ export default function About() {
             
             <div className="space-y-8 text-lg">
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Practice Time Guidelines</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Practice Time Guidelines</h3>
                 <p>
                   Each student is unique. The young child should have time to practice at least 15-30 minutes 
                   a day in the beginning. The older child and adult should have time to practice at least 
@@ -155,7 +149,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Building Consistency</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Building Consistency</h3>
                 <p>
                   Students will build strength with consistent practice. I encourage students to practice 
                   every day, but sometimes that may not be possible, yet even playing the song(s) a couple 
@@ -165,7 +159,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-eb-garamond text-brown-600">Benefits of Daily Practice</h3>
+                <h3 className="text-2xl font-eb-garamond text-brown-600 underline">Benefits of Daily Practice</h3>
                 <p>
                   Daily experience at the keyboard is good for the student's hands, ears, eyes, and mind. 
                   As they progress, so should their daily practice time. As a matter of course, focused and 

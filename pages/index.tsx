@@ -32,8 +32,9 @@ export default function Home() {
                 tailored to your unique journey.
               </p>
               
-              <div className="max-w-3xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl p-8 mb-10 shadow-sm animate-fade-in-up animation-delay-300">
-                <p className="text-gray-700 leading-relaxed">
+              <div className="max-w-3xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl p-8 mb-10 shadow-sm animate-fade-in-up animation-delay-300 flex flex-col items-center justify-center">
+                <h2 className="text-2xl font-eb-garamond text-center mb-4">Personalized Learning and Experienced Teacher</h2>
+                <p className="text-gray-700 leading-relaxed text-center">
                   Kerry Terry has taught piano since 2008. With over a decade and a half of experience, she uses a blend of lesson/theory books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. She teaches beginner to intermediate, children to adults. As the music skills progress, the confidence grows, helping each student find their inner musician.
                 </p>
               </div>
@@ -92,10 +93,6 @@ export default function Home() {
                       {
                         title: 'Experienced Teacher',
                         description: 'Over 15 years of teaching experience with students of all ages.'
-                      },
-                      {
-                        title: 'Convenient Location',
-                        description: 'Conveniently located in Lake County, California.'
                       }
                     ].map((feature, index) => (
                       <div 

@@ -22,7 +22,7 @@ interface LocalBusinessData {
 
 const DEFAULT_BUSINESS_DATA: LocalBusinessData = {
   name: 'Kerry Terry Piano',
-  description: 'Professional piano instruction for all levels in Lake County, California. Traditional methods combined with modern techniques.',
+  description: 'Professional piano instruction for all levels. Traditional methods combined with modern techniques.',
   image: 'https://kerryterry.com/images/kerry-terry.png',
   telephone: '+1-707-555-0123', // TODO: Replace with actual phone number
   address: {

@@ -14,8 +14,8 @@ interface LayoutProps {
 
 export default function Layout({
   children,
-  title = 'Piano Lessons in Lake County | Kerry Terry Piano',
-  description = 'Discover the joy of piano with Kerry Terry. Offering personalized piano lessons in Lake County for beginners to advanced students. Traditional methods combined with modern techniques.',
+  title = 'Kerry Terry Piano',
+  description = 'Discover the joy of piano with Kerry Terry. Offering personalized piano lessons for beginners to advanced students. Traditional methods combined with modern techniques.',
   image = '/images/piano-lessons.jpg',
   noindex = false,
 }: LayoutProps) {
@@ -80,7 +80,7 @@ export default function Layout({
 
         {/* Additional Meta Tags */}
         <meta name="author" content="Kerry Terry" />
-        <meta name="keywords" content="piano lessons, piano teacher, music education, Lake County, California, Kerry Terry, piano instruction, beginner piano, advanced piano" />
+        <meta name="keywords" content="piano lessons, piano teacher, music education, Kerry Terry, piano instruction, beginner piano, advanced piano" />
         <meta name="format-detection" content="telephone=no" />
       </Head>
 

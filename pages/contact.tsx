@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <Layout 
       title="Contact | Kerry Terry Piano Lessons" 
-      description="Contact Kerry Terry for piano lessons in Lake County. Offering lessons for beginners to advanced students."
+      description="Contact Kerry Terry for piano lessons. Offering lessons for beginners to advanced students."
     >
       <div className="min-h-screen pt-16 animate-fade-in">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -80,11 +80,6 @@ export default function Contact() {
                 </h2>
                 
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">Location</h3>
-                    <p className="text-gray-600">Lake County, California</p>
-                  </div>
-                  
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Email</h3>
                     <a 
