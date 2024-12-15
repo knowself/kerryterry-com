@@ -40,6 +40,44 @@ This website serves as the online presence for KerryTerry's piano teaching pract
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Deployment Strategy
+
+This project uses a two-branch strategy for development and deployment:
+
+- `master` branch: Production environment
+  - Automatically deploys to kerryterry.com
+  - Contains stable, production-ready code
+  - Protected branch, changes only through approved PRs
+
+- `staging` branch: Development/Testing environment
+  - Automatically deploys to staging.kerryterry.com
+  - Used for active development and testing
+  - New features and changes are developed here
+
+### Workflow
+
+1. All development work happens on the `staging` branch
+2. Changes are deployed automatically to staging.kerryterry.com
+3. After testing and approval, create a Pull Request from `staging` to `master`
+4. Once PR is approved and merged, changes automatically deploy to kerryterry.com
+
+### Branch Management
+
+```bash
+# Switch to staging branch for development
+git checkout staging
+
+# Create a new feature
+git checkout -b feature/your-feature-name staging
+
+# After feature is complete, merge back to staging
+git checkout staging
+git merge feature/your-feature-name
+
+# Push changes to trigger staging deployment
+git push origin staging
+```
+
 ## Project Structure
 
 ```
