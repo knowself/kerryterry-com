@@ -25,7 +25,7 @@ git push origin staging     # deploys to staging.kerryterry.com
 # Wait for review and approval
 ```
 
-❌ NEVER
+✅ NEVER
 - Push directly to master
 - Skip staging tests
 - Merge without PR review

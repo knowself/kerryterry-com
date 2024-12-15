@@ -40,6 +40,35 @@ This website serves as the online presence for KerryTerry's piano teaching pract
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Environment Setup
+
+1. Copy the environment template:
+   ```bash
+   cp .env.template .env.development   # For development
+   # or
+   cp .env.template .env.production    # For production
+   ```
+
+2. Update environment variables:
+   - For development:
+     - Get a Resend API key from [Resend Dashboard](https://resend.com)
+     - Use the Resend onboarding email or a verified sender
+     - Update `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`
+   
+   - For production:
+     - Use production Resend API key
+     - Use verified domain email addresses
+     - Set variables in deployment platform (Vercel)
+
+Required Environment Variables:
+- `RESEND_API_KEY`: Your Resend API key
+- `CONTACT_FROM_EMAIL`: Verified sender email
+- `CONTACT_TO_EMAIL`: Recipient email for contact forms
+- `NODE_ENV`: Set automatically by Next.js
+- `AUTO_RESPONSE_ENABLED`: Enable/disable auto-responses
+
+Note: Never commit `.env.*` files to version control. They contain sensitive information.
+
 ## Deployment Strategy
 
 This project uses a two-branch strategy for development and deployment:
