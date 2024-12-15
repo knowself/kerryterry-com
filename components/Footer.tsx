@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,20 @@ const Footer = () => {
       <div className="container mx-auto py-12 md:py-16">
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand Section */}
-          <div>
+          <div className="flex flex-col items-center">
             <Link href="/" className="text-2xl font-eb-garamond text-brown-dark hover:text-primary transition-colors">
-              Kerry Terry
+              Piano Lessons with Kerry Terry
             </Link>
-            <p className="mt-4 text-brown">
-              Providing comprehensive piano instruction, combining traditional methods with modern techniques.
-            </p>
+            
+            <div className="mt-4 relative w-24 h-24">
+              <Image
+                src="/images/Best Treble Heart Clef AI of a trace v2.jpg"
+                alt="Kerry Heart Clef"
+                fill
+                className="object-contain"
+              />
+            </div>
+            
           </div>
 
           {/* Quick Links */}
@@ -39,8 +47,8 @@ const Footer = () => {
             <h3 className="text-lg font-eb-garamond text-brown-dark mb-4">Contact</h3>
             <div className="space-y-3 text-brown">
               <p>
-                <a href="mailto:kerry@kerryterry.com" className="nav-link">
-                  kerry@kerryterry.com
+                <a href="mailto:kerryterry@aol.com" className="nav-link">
+                kerryterry@aol.com
                 </a>
               </p>
             </div>

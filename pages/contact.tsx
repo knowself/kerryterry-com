@@ -75,18 +75,14 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="animate-fade-in-left">
               <div className="bg-gray-50 p-8 rounded-2xl">
-                <h2 className="text-2xl font-eb-garamond font-medium text-gray-900 mb-6">
-                  Contact Information
-                </h2>
-                
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Email</h3>
                     <a 
-                      href="mailto:kerry@kerryterry.com" 
+                      href="mailto:kerryterry@aol.com" 
                       className="text-brown hover:text-brown/80 transition"
                     >
-                      kerry@kerryterry.com
+                      kerryterry@aol.com
                     </a>
                   </div>
 
@@ -186,7 +182,6 @@ export default function Contact() {
                   >
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
                     <option value="parent">Parent of Student</option>
                   </select>
                   {errors.studentType && (

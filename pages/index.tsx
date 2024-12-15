@@ -82,9 +82,9 @@ export default function Home() {
               </div>
 
               {/* Features Section */}
-              <section className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid md:grid-cols-3 gap-12">
+              <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+                <div className="max-w-3xl">
+                  <div className="grid md:grid-cols-2 gap-24">
                     {[
                       {
                         title: 'Personalized Learning',
@@ -97,7 +97,7 @@ export default function Home() {
                     ].map((feature, index) => (
                       <div 
                         key={feature.title}
-                        className="text-center animate-fade-in-up"
+                        className="flex flex-col items-center justify-center text-center animate-fade-in-up"
                         style={{ animationDelay: `${(index + 1) * 200}ms` }}
                       >
                         <h3 className="text-xl font-eb-garamond font-medium text-gray-900 mb-4">

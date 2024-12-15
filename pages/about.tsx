@@ -187,7 +187,7 @@ export default function About() {
                   {
                     title: '15+ Years',
                     subtitle: 'Teaching Experience',
-                    description: 'Helping students of all ages and skill levels achieve their musical goals.'
+                    description: 'Helping students of all ages achieve their musical goals.'
                   },
                   {
                     title: 'Personalized',
@@ -227,7 +227,7 @@ export default function About() {
                   Ready to Begin Your Musical Journey?
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  Whether you're a complete beginner or looking to advance your skills, 
+                  Whether you're a complete beginner or looking to advance your skills,<br/>
                   I'm here to guide you on your musical path.
                 </p>
                 <Link
