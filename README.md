@@ -51,17 +51,17 @@ This website serves as the online presence for KerryTerry's piano teaching pract
 
 2. Update environment variables:
    - For development:
-     - Get a Resend API key from [Resend Dashboard](https://resend.com)
-     - Use the Resend onboarding email or a verified sender
+     - Get a SendGrid API key from [SendGrid Dashboard](https://app.sendgrid.com)
+     - Verify your sender email or domain in SendGrid
      - Update `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`
    
    - For production:
-     - Use production Resend API key
+     - Use production SendGrid API key
      - Use verified domain email addresses
      - Set variables in deployment platform (Vercel)
 
 Required Environment Variables:
-- `RESEND_API_KEY`: Your Resend API key
+- `SENDGRID_API_KEY`: Your SendGrid API key
 - `CONTACT_FROM_EMAIL`: Verified sender email
 - `CONTACT_TO_EMAIL`: Recipient email for contact forms
 - `NODE_ENV`: Set automatically by Next.js
