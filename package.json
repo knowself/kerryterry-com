@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@sendgrid/mail": "^8.1.4",
     "@types/nodemailer": "^6.4.16",
     "cssnano": "^7.0.6",
     "isomorphic-dompurify": "^2.16.0",
@@ -60,7 +61,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.53.2",
-    "resend": "^4.0.1",
     "sharp": "^0.32.6",
     "to-ico": "^1.1.5",
     "zod": "^3.23.8"

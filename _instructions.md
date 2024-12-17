@@ -99,7 +99,7 @@ This section provides a comprehensive overview of our technology stack, includin
 ### Email and Asset Processing
 - **Email Services**
   - Nodemailer (v6.9.16) - [Documentation](https://nodemailer.com/)
-  - Resend (v4.0.1) - [Documentation](https://resend.com/docs)
+  - @sendgrid/mail - [Documentation](https://docs.sendgrid.com/for-developers/sending-email/quickstart-nodejs)
 - **Asset Processing**
   - Sharp (v0.32.6) for image optimization - [Documentation](https://sharp.pixelplumbing.com/)
   - to-ico (v1.1.5) for favicon generation
