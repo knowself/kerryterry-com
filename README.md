@@ -42,14 +42,19 @@ This website serves as the online presence for KerryTerry's piano teaching pract
 
 ## Environment Setup
 
-1. Copy the environment template:
+1. SSH Key Configuration:
+   - This project uses SSH for GitHub authentication
+   - SSH key is already configured and registered with GitHub
+   - No additional SSH setup required for development
+
+2. Copy the environment template:
    ```bash
    cp .env.template .env.development   # For development
    # or
    cp .env.template .env.production    # For production
    ```
 
-2. Update environment variables:
+3. Update environment variables:
    - For development:
      - Get a SendGrid API key from [SendGrid Dashboard](https://app.sendgrid.com)
      - Verify your sender email or domain in SendGrid
