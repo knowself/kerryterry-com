@@ -1,0 +1,26 @@
+
+## Project Purpose and Context
+kerrterry.com is a Next.js app that features Kerry Terry's piano lessons and music education. It is built with TypeScript, Next.js, and Tailwind CSS.
+
+## Project Structure
+The project is structured as follows:
+- `components`: Contains reusable React components used across the app.
+- `pages`: Contains the Next.js pages and API routes.
+- `public`: Contains static assets and images.
+- `styles`: Contains global styles and Tailwind configuration.
+- `types`: Contains TypeScript type definitions.
+- `utils`: Contains utility functions and helpers.
+
+## Technology Stack
+- TypeScript: For strong typing and better code quality.
+- Next.js: For server-side rendering and routing.
+- Tailwind CSS: For styling and responsive design.
+- React: For building user interfaces.
+- Node.js: For server-side JavaScript runtime.
+- Nodemailer: For sending emails.
+- Zod: For schema validation.
+- Jest: For unit testing.
+- ESLint: For code linting.
+- Prettier: For code formatting.
+- Husky: For git hooks.
+- Lint-staged: For linting staged files.

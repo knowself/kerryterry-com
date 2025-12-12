@@ -139,6 +139,25 @@ The site is built for deployment on Vercel, optimized for:
 - Edge functions
 - API routes
 
+# Project Roadmap
+
+## Tech Stack
+- React 18
+- Next.js 13
+- TypeScript
+- Tailwind CSS
+- AWS SES (Email)
+- Zod (Validation)
+
+## Milestones
+1. ✅ Project Setup
+2. ✅ Core Pages
+3. 🏗️ Contact Form
+   - [x] Form UI
+   - [x] Validation
+   - [ ] AWS SES Integration
+   - [ ] Testing
+
 ## License
 
 All Rights Reserved - Kerry Terry
