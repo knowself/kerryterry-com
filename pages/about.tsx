@@ -40,11 +40,11 @@ export default function About() {
       <div className="min-h-screen pt-16 animate-fade-in">
         <div className="pt-6">
           <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-6 sm:px-10 lg:px-16 mb-6 animate-fade-in-up">
-            <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-4">
+            <div className="max-w-6xl mx-auto flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory sm:flex-wrap sm:justify-center sm:overflow-visible">
               {staticGalleryImages.map((image) => (
                 <div
                   key={image.src}
-                  className="relative aspect-square w-full max-w-sm sm:w-[calc(50%-0.5rem)] lg:w-[220px] overflow-hidden rounded-2xl bg-gray-50 shadow-sm"
+                  className="relative aspect-square w-[85vw] max-w-sm shrink-0 snap-center overflow-hidden rounded-2xl bg-gray-50 shadow-sm sm:w-[calc(50%-0.5rem)] sm:shrink sm:snap-none lg:w-[220px]"
                 >
                   <Image
                     src={image.src}
