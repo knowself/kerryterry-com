@@ -11,22 +11,12 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative w-full h-[180px]">
               <Image
-                src="/images/website-banner.png"
+                src="/images/website-banner with picture.png"
                 alt="Kerry Terry Piano"
-                fill
-                className="object-contain -translate-x-[100px]"
-                priority
-              />
-
-              <div className="absolute right-[200px] bottom-0 w-[121px] h-[180px]">
-              <Image
-                src="/images/kerry_terry_4k_300dpi_v2.png"
-                alt="Kerry Terry portrait"
                 fill
                 className="object-contain"
                 priority
               />
-              </div>
             </div>
           </div>
         </div>
