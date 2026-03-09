@@ -33,7 +33,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 mb-2">Availability</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Lessons are available Monday through Friday.<br />
+                    Lessons are available Monday through Friday, online or in person.<br />
                     New students are always welcome!
                   </p>
                 </div>
