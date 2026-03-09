@@ -68,11 +68,11 @@ export default function About() {
           */}
 
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 pb-24">
-          <section className="bg-gray-50 px-4 sm:px-6 lg:px-8 py-12">
+          <section className="bg-gray-50 px-4 sm:px-6 lg:px-8 pt-6 pb-12">
             <div className="max-w-3xl mx-auto animate-fade-in-right">
               <div className="space-y-4 text-gray-600">
-                <p>
-                  Links to the piano methods I use most:
+                <p className="text-2xl font-bold text-center">
+                  How I teach and what I use most
                 </p>
                 <p className="text-2xl text-blue-600 hover:text-blue-700 text-center py-2">
                   <a href="https://www.alfred.com" target="_blank" rel="noopener noreferrer">
