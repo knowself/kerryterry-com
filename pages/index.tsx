@@ -7,23 +7,35 @@ export default function Home() {
     <Layout>
       <div className="min-h-screen animate-fade-in">
         {/* Banner Image */}
-        <div className="pt-24 pb-6">
-          <div className="relative w-full h-[300px]">
-            <Image
-              src="/images/website-banner.png"
-              alt="Kerry Terry Piano"
-              fill
-              className="object-contain"
-              priority
-            />
+        <div className="pt-24 pb-0">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-[180px]">
+              <Image
+                src="/images/website-banner.png"
+                alt="Kerry Terry Piano"
+                fill
+                className="object-contain -translate-x-[100px]"
+                priority
+              />
+
+              <div className="absolute right-[200px] bottom-0 w-[121px] h-[180px]">
+              <Image
+                src="/images/kerry_terry_4k_300dpi_v2.png"
+                alt="Kerry Terry portrait"
+                fill
+                className="object-contain"
+                priority
+              />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
+        <section className="relative px-4 sm:px-6 lg:px-8 pt-0 pb-16 overflow-hidden">
           <div className="max-w-5xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-eb-garamond font-medium tracking-tight text-gray-900 mb-8 animate-fade-in-up">
+              <h1 className="mt-[10px] text-2xl sm:text-3xl lg:text-4xl font-eb-garamond font-medium tracking-tight text-gray-900 mb-[22px] animate-fade-in-up">
                 Piano Lessons with Kerry Terry
               </h1>
               
@@ -33,9 +45,9 @@ export default function Home() {
               </p>
               
               <div className="max-w-3xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl p-8 mb-10 shadow-sm animate-fade-in-up animation-delay-300 flex flex-col items-center justify-center">
-                <h2 className="text-2xl font-eb-garamond text-center mb-4">Personalized Learning and Experienced Teacher</h2>
+                <h2 className="text-2xl font-eb-garamond text-center mb-4">Personalized Learning with an Experienced Teacher</h2>
                 <p className="text-gray-700 leading-relaxed text-center">
-                  Kerry Terry has taught piano since 2008. With over a decade and a half of experience, she uses a blend of lesson/theory books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. She teaches beginner to intermediate, children to adults. As the music skills progress, the confidence grows, helping each student find their inner musician.
+                  I have taught piano since 2008. With over a decade and a half of experience, I use a blend of lesson/theory books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. I teach beginner to intermediate, children to adults. As the music skills progress, the confidence grows, we together help each student find their inner musician.
                 </p>
               </div>
 
@@ -81,34 +93,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Features Section */}
-              <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
-                <div className="max-w-3xl">
-                  <div className="grid md:grid-cols-2 gap-24">
-                    {[
-                      {
-                        title: 'Personalized Learning',
-                        description: 'Tailored instruction that adapts to your pace and learning style.'
-                      },
-                      {
-                        title: 'Experienced Teacher',
-                        description: 'Over 15 years of teaching experience with students of all ages.'
-                      }
-                    ].map((feature, index) => (
-                      <div 
-                        key={feature.title}
-                        className="flex flex-col items-center justify-center text-center animate-fade-in-up"
-                        style={{ animationDelay: `${(index + 1) * 200}ms` }}
-                      >
-                        <h3 className="text-xl font-eb-garamond font-medium text-gray-900 mb-4">
-                          {feature.title}
-                        </h3>
-                        <p className="text-gray-600">{feature.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
             </div>
           </div>
         </section>
