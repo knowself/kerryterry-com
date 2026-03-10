@@ -108,12 +108,12 @@ export default function Navigation() {
         id="mobile-menu"
         role="navigation"
         aria-label="Mobile menu"
-        className={`fixed inset-0 top-16 bg-white/80 backdrop-blur-md z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-x-0 top-16 bg-white/80 backdrop-blur-md z-40 border-b border-gray-100 md:hidden transition-opacity duration-300 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <nav className="container mx-auto px-6 py-8">
-          <div className="flex flex-col space-y-6">
+        <nav className="container mx-auto px-6 py-4">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
