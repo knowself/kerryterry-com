@@ -72,20 +72,10 @@ export default function About() {
             <div className="max-w-3xl mx-auto animate-fade-in-right">
               <div className="space-y-4 text-gray-600">
                 <p className="text-2xl font-bold text-center">
-                  How I teach and what I use most
-                </p>
-                <p className="text-2xl text-blue-600 hover:text-blue-700 text-center py-2">
-                  <a href="https://www.alfred.com" target="_blank" rel="noopener noreferrer">
-                    Alfred Music
-                  </a>
-                </p>
-                <p className="text-2xl text-blue-600 hover:text-blue-700 text-center py-2">
-                  <a href="https://www.pianoadventures.com" target="_blank" rel="noopener noreferrer">
-                    Piano Adventures
-                  </a>
+                  Lesson Outline
                 </p>
                 <p>
-                  I try to keep it simple in the beginning to not overload and so I can assess the learning level and pace, as well as keep the desire and interest going. Ultimately, it is about the joy of playing the music.
+                  I try to keep it simple in the beginning to not overload and so I can assess the learning level and pace, as well as keep the desire and interest going. Ultimately, it is about the joy of playing the music. I teach using <a className="text-blue-600 hover:text-blue-700" href="https://www.alfred.com" target="_blank" rel="noopener noreferrer">Alfred Music</a> and <a className="text-blue-600 hover:text-blue-700" href="https://www.pianoadventures.com" target="_blank" rel="noopener noreferrer">Piano Adventures</a> materials, selecting books that match the student’s level and goals. Other piano music and composition materials will be discussed.
                 </p>
                 <p>
                   Practice is a necessary discipline. For the adult learner, we will work together to develop a practice plan. The young student generally requires extra encouragement to practice. As with all education for our children, it is helpful to have the parent work with the young student to find the best daily practice time, and then have it marked on a calendar or daily schedule. This will help the student to make piano practice time a daily habit.
