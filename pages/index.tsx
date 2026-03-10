@@ -37,7 +37,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl p-8 mb-10 shadow-sm animate-fade-in-up animation-delay-300 flex flex-col items-center justify-center">
                 <h2 className="text-2xl font-eb-garamond text-center mb-4">Personalized Learning with an Experienced Teacher</h2>
                 <p className="text-gray-700 leading-relaxed text-center">
-                  I have taught piano since 2008. With over a decade and a half of experience, I use a blend of lesson/theory books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. I teach beginner to intermediate, children to adults. As the music skills progress, the confidence grows, we together help each student find their inner musician.
+                  I've been teaching piano since 2008. With over a decade and a half of experience, I use a blend of lesson, theory, technique books along with ear training, student composion and the occasional arrangement from well-known composers and song writers. I teach beginner to intermediate, children to adults. As the music skills progress, the confidence grows. Together we help each student find their inner musician.
                 </p>
               </div>
 
